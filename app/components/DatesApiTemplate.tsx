@@ -25,7 +25,7 @@ export default function DatesApiTemplate(props: DatesApiTemplateProps) {
       justify="space-between"
       ta="center"
       style={{
-        height: "calc(100vh - 8rem)",
+        height: "calc(100vh - 9rem)",
         marginLeft: "2rem",
         marginRight: "2rem",
       }}
