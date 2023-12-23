@@ -69,9 +69,7 @@ export default function App() {
                     hiddenFrom="sm"
                     size="sm"
                   />
-                  <Title className={classes.appshelltitle}>
-                    Date Idea Generator
-                  </Title>
+                  <Title className={classes.appshelltitle}>Date Ideas</Title>
                 </Flex>
                 <ColorSchemeToggle />
               </Flex>
