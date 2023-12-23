@@ -64,7 +64,7 @@ export default function DateIdeasPage() {
                 fontStyle: "italic",
               }}
             >
-              Press the button for an idea!
+              {`Press the button for an idea! :)`}
             </Title>
           </motion.div>
         ) : (
