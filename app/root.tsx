@@ -1,4 +1,5 @@
 import "@mantine/core/styles.css";
+import classes from "./components/Welcome/Welcome.module.css";
 
 import { cssBundleHref } from "@remix-run/css-bundle";
 import type { LinksFunction } from "@remix-run/node";
@@ -68,7 +69,9 @@ export default function App() {
                     hiddenFrom="sm"
                     size="sm"
                   />
-                  <Title>Date Idea Generator</Title>
+                  <Title className={classes.appshelltitle}>
+                    Date Idea Generator
+                  </Title>
                 </Flex>
                 <ColorSchemeToggle />
               </Flex>

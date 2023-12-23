@@ -2,6 +2,7 @@ import { Button, Stack, Title } from "@mantine/core";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { useRevalidator } from "react-router-dom";
+import classes from "./Welcome/Welcome.module.css";
 
 //function to generate random number from 0 to 100
 // function getRandomInt(max: number) {
@@ -17,29 +18,19 @@ export default function DatesApiTemplate(props: DatesApiTemplateProps) {
   const [hasFetchedOnce, setHasFetchedOnce] = useState(false);
   //const [hasAnimationFinished, setHasAnimationFinished] = useState(false);
   const revalidator = useRevalidator();
-  const { data, title } = props;
+  const { data } = props;
 
   return (
     <Stack
       justify="space-between"
       ta="center"
       style={{
-        height: "calc(100vh - 150px)",
+        height: "calc(100vh - 8rem)",
         marginLeft: "2rem",
         marginRight: "2rem",
       }}
     >
-      <Title
-        size="h1"
-        style={{
-          textAlign: "left",
-          fontSize: "3rem",
-          fontWeight: "bold",
-        }}
-      >
-        {title}
-      </Title>
-
+      <motion.div />
       <AnimatePresence mode="popLayout">
         {!hasFetchedOnce ? (
           <motion.div
@@ -53,14 +44,7 @@ export default function DatesApiTemplate(props: DatesApiTemplateProps) {
               velocity: 1,
             }}
           >
-            <Title
-              size="h1"
-              style={{
-                fontSize: "3rem",
-                fontWeight: "lighter",
-                fontStyle: "italic",
-              }}
-            >
+            <Title className={classes.title}>
               {`Press the button for an idea! :)`}
             </Title>
           </motion.div>
@@ -78,16 +62,7 @@ export default function DatesApiTemplate(props: DatesApiTemplateProps) {
               velocity: 1,
             }}
           >
-            <Title
-              size="h1"
-              style={{
-                fontSize: "4rem",
-                fontWeight: "bold",
-                fontStyle: "italic",
-              }}
-            >
-              {data.name}
-            </Title>
+            <Title className={classes.title}>{data.name}</Title>
           </motion.div>
         )}
         <Button
