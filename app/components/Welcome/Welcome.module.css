@@ -1,21 +1,21 @@
 .title {
   color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
-  font-size: rem(70px);
+  font-size: rem(50px);
   font-weight: 400;
   letter-spacing: rem(-2px);
 
   @media (max-width: $mantine-breakpoint-md) {
-    font-size: rem(50px);
+    font-size: rem(40px);
   }
 }
 
 .appshelltitle {
   color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
-  font-size: rem(40px);
+  font-size: rem(30px);
   font-weight: 400;
   letter-spacing: rem(-2px);
 
   @media (max-width: $mantine-breakpoint-md) {
-    font-size: rem(30px);
+    font-size: rem(25px);
   }
 }

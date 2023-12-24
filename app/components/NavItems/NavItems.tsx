@@ -10,7 +10,7 @@ export function NavItems() {
         leftSection={<IconActivity size="1rem" stroke={1.5} />}
         rightSection={<IconChevronRight size="0.8rem" stroke={1.5} />}
         active
-        href="/date-ideas"
+        href="/dates"
         description="Generate random date ideas!"
       />
       <NavLink
@@ -18,7 +18,7 @@ export function NavItems() {
         leftSection={<IconActivity size="1rem" stroke={1.5} />}
         rightSection={<IconChevronRight size="0.8rem" stroke={1.5} />}
         active
-        href="/food-ideas"
+        href="/foods"
         description="Grab random bite to eat!"
       />
       <NavLink
@@ -26,15 +26,8 @@ export function NavItems() {
         leftSection={<IconActivity size="1rem" stroke={1.5} />}
         rightSection={<IconChevronRight size="0.8rem" stroke={1.5} />}
         active
-        href="/dessert-ideas"
+        href="/desserts"
         description="Got a sweet tooth? Grab a dessert!"
-      />
-      <NavLink
-        label="Misc Ideas"
-        leftSection={<IconActivity size="1rem" stroke={1.5} />}
-        rightSection={<IconChevronRight size="0.8rem" stroke={1.5} />}
-        active
-        description="Surprise me!"
       />
     </Group>
   );

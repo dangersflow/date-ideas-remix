@@ -12,17 +12,13 @@ export function Welcome() {
           component="span"
           gradient={{ from: "pink", to: "yellow" }}
         >
-          Mantine
+          Date Ideas
         </Text>
       </Title>
       <Text color="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl">
-        This starter Remix project includes a minimal setup for server side
-        rendering, if you want to learn more on Mantine + Remix integration
-        follow{" "}
-        <Anchor href="https://mantine.dev/guides/remix/" size="lg">
-          this guide
-        </Anchor>
-        . To get started edit index.tsx file.
+        This project aims to simplify the difficult decisions that come along
+        with trying to figure out what to do with your significant other. Go on
+        and get some ideas! Made with love. -Frank
       </Text>
     </>
   );

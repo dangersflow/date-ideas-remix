@@ -43,7 +43,7 @@ export default function App() {
       <body>
         <MantineProvider>
           <AppShell
-            header={{ height: 100 }}
+            header={{ height: 70 }}
             navbar={{
               width: 300,
               breakpoint: "sm",
