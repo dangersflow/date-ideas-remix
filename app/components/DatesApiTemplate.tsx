@@ -1,6 +1,6 @@
-import { Button, Stack, Title } from "@mantine/core";
+import { Button, Loader, Stack, Title } from "@mantine/core";
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRevalidator } from "react-router-dom";
 import classes from "./Welcome/Welcome.module.css";
 
@@ -18,7 +18,20 @@ export default function DatesApiTemplate(props: DatesApiTemplateProps) {
   const [hasFetchedOnce, setHasFetchedOnce] = useState(false);
   //const [hasAnimationFinished, setHasAnimationFinished] = useState(false);
   const revalidator = useRevalidator();
+  const [isLoading, setIsLoading] = useState(false);
   const { data } = props;
+
+  useEffect(() => {
+    if (revalidator.state === "loading") {
+      setIsLoading(true);
+    } else {
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 500);
+    }
+  }, [revalidator]);
+
+  console.log("revalidator state: ", revalidator.state);
 
   return (
     <Stack
@@ -46,6 +59,27 @@ export default function DatesApiTemplate(props: DatesApiTemplateProps) {
           >
             <Title className={classes.title}>
               {`Press the button for an idea! :)`}
+            </Title>
+          </motion.div>
+        ) : isLoading ? (
+          <motion.div
+            key={"loadingSpinner"}
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            exit={{ opacity: 0, y: "350px" }}
+            transition={{
+              type: "spring",
+              stiffness: 2500,
+              damping: 300,
+              mass: 10,
+              velocity: 1,
+            }}
+            style={{
+              display: "block",
+            }}
+          >
+            <Title>
+              Grabbing your idea! <Loader />
             </Title>
           </motion.div>
         ) : (
